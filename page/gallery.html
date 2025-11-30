@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Gold Life School</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Gold Life School</div>
+    <nav>
+        <a href="./home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="./news.html">News</a>
+    </nav>
+</header>
+
+<section class="gallery-hero">
+    <h1>Our Gallery</h1>
+    <p>School memories and achievements</p>
+</section>
+
+<section class="gallery-grid">
+
+    <div class="photo">
+        <img src="https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/588455165_1270161971793718_6766994147973123913_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=yqQo0ZJJGssQ7kNvwFEg5GJ&_nc_oc=Adl9qCIyBn7_I_29K8hE8aa_mId9NAvBVgAsCmegEU5ALv4ULEad6nGWhgkhHn9IV9s&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=EfUalRb5jVJSkD3JNjG6kA&oh=00_Afjn0G5QAymeSB1u8PVMBgo5wHxrVyWZn0r_ygS55T7jeg&oe=69306D9D" alt="School Photo">
+    </div>
+
+    <div class="photo">
+        <img src="https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/588406602_1270161951793720_8696025989993640948_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=RWncirAmt5MQ7kNvwFrSLbc&_nc_oc=AdmZwBu6jMa97B7bGRbmzeY7TE98LpCgxaH-yAkOV4qSl_AkZe_dlItBFmt-U7Y0hNM&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=lKWmbqyM1gpjvhx9HMAngw&oh=00_Afg_d5-uhlscfsV7SIE-XJawKGVrdpCDoCl8sJ_6WlfB3Q&oe=69306DB4" alt="School Photo">
+    </div>
+
+    <div class="photo">
+        <img src="https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/584428084_1269162275227021_503712413414250318_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=f727a1&_nc_ohc=LjXKrLg-gdEQ7kNvwHgJv4l&_nc_oc=Adnrp1BMBPSQmOsiGLxDrNdfVMq7fOlE36R9UFrcgew0TdCT17bUYOxa6rU0vvDUOSM&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=UStETPqKhern9GSiC-PsBA&oh=00_AfigMl2HaigzxOkAXnNh9CfcfCKLfjrV32xboZQzpPjDCg&oe=69307009" alt="School Photo">
+    </div>
+
+    <div class="photo">
+        <img src="https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/565651591_1240853641391218_2392669666395069346_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=f727a1&_nc_ohc=OSpOGYCXOK4Q7kNvwEQNlPP&_nc_oc=AdmW4EL0Buy7cgiWRSah82KzEjnotUEDKWIA9stnbaNhMErUuIf9PI8MBwpXc4lWMPY&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=remhcT91WI3C9q6ReEZ0WA&oh=00_AfipYK73AlBt9tesQeyUiIGwyHgPU4qsPD6IesHfK_bk7g&oe=69307F27" alt="School Photo">
+    </div>
+
+    <div class="photo">
+        <img src="https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/567675276_1240853674724548_6943342384487615371_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=f727a1&_nc_ohc=uQ5Ns78b4w0Q7kNvwG-PbpP&_nc_oc=AdkNDByGptl0LCx9LwEiBNEQs87WK8mBF6AV4TItcTQFh8_7k8g7azbySCLZXNXKeV0&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=ZjWd0Izi_w_Xpo5pHfAmiw&oh=00_AfjSuLrO9l6ZHowh7AfMPlCnfkzpXsDBOVZlSMuA8U8XdQ&oe=69306521" alt="School Photo">
+    </div>
+
+</section>
+
+<footer>
+    © 2025 Gold Life School, Rajound | Designed by Yogesh Harit
+</footer>
+
+<!-- Lightbox Viewer -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script>
+    const images = document.querySelectorAll(".gallery-grid img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+
+    images.forEach(img => {
+        img.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImg) {
+            lightbox.style.display = "none";
+        }
+    });
+</script>
+
+</body>
+</html>
